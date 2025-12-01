@@ -1,0 +1,69 @@
+#include<iostream>
+using namespace std;
+
+int max(int arr[],int size){
+	int z=INT_MIN;
+	for(int i=0;i<size;i++)
+	{if(arr[i] > z)
+	z = arr[i];
+	}
+	return z;
+	
+}
+
+int indxmax(int arr[],int size){
+	int z=INT_MIN,indx=0;
+	for(int i=0;i<size;i++)
+	{if(arr[i] > z)
+	z = arr[i];
+	indx=i;
+	}
+	return indx;
+	
+}
+
+int min(int arr[],int size){
+	int z=INT_MAX;
+	for(int i=0;i<size;i++)
+	{if(arr[i] < z)
+	z = arr[i];
+	}
+	
+	return z;
+	
+}
+
+int indxmin(int arr[],int size){
+	int z=INT_MAX,indx=0;
+	for(int i=0;i<size;i++)
+	{if(arr[i] < z)
+	z = arr[i];
+	}
+	
+	return indx;
+	
+}
+int main(){
+	
+int size;
+int arr[size];
+
+cout<<"Enter the Size of Array : "<<endl;
+cin>>size;
+cout<<endl;
+
+for(int i=0;i<size;i++)
+{	cout<<"Enter the  '"<<i<<"'  Index of Array : "<<endl;
+	cin>>arr[i];}
+	cout<<endl;
+	cout<<"--------- OUTPUT ---------------"<<endl;
+	cout<<endl;
+	cout<<"Largest Number in Array = "<<max(arr,size)<<" at Index : "<<indxmax(arr,size)<<endl;
+	
+	cout<<endl;
+	cout<<endl;
+	cout<<"Smallest Number in Array = "<<min(arr,size)<<" at Index : "<<indxmin(arr,size)<<endl;;
+
+
+return 0;	
+}
