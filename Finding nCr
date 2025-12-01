@@ -1,0 +1,37 @@
+#include<iostream>
+using namespace std;
+double fact(int x){
+	double fact=1;
+	for(int i=1;i<=x;i++)
+	{
+		fact=fact*i;
+	}
+	return fact;
+}
+
+int main(){
+	//nCr=n!/(r!*(n-r)!)
+	int n,r;
+	cout<<"Enter the value of n : "<<endl; cin>>n;
+	cout<<endl;
+	cout<<endl;
+
+	cout<<"Enter the value of r(n>r) : "<<endl; cin>>r;
+	cout<<endl;
+	cout<<endl;
+	cout<<endl;
+	 cout<<"-----------------OUTPUT----------------------"<<endl;
+
+int c=n-r;
+
+
+	if(n>=r){
+	 int z=fact(n)/(fact(r)*fact(c));
+	cout<<"nCr : "<<z<<endl;
+		}
+		
+	else
+		cout<<"invalid input...!";
+		return 0;
+	}
+	
