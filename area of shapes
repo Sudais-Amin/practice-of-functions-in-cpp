@@ -1,0 +1,80 @@
+#include<iostream>
+using namespace std;
+//cirlce
+float circle(int r)
+{
+	float z = (3.14)*r*r;
+	return z;
+}
+//square
+double square (int l)
+{
+	double z=l*l;
+	return z;
+}
+//sphere
+double sphere(double r)
+{
+	double z=4*(3.14)*r*r;
+	return z;
+}
+//cube
+double cube(double l)
+{
+	double z = 6*l*l;
+	return z;
+}
+//rectangle
+double rectangle(double l,double b)
+{
+	double z = l*b;
+	return z;
+}
+int main(){
+	cout<<"Enter your choice for shapes whoes area you want to print : "<<endl;
+	int choice;
+	cout<<" 1. circle \n 2. square \n 3. sphere \n 4. cube \n 5. rectangle "<<endl;
+	cout<<endl;
+	cout<<endl;
+	cout<<"choice : ";
+	cin>>choice;
+	cout<<endl;
+	cout<<endl;
+	cout<<endl;
+	cout<<"------------------------  OUTPUT  ---------------------------"<<endl;
+	if (choice == 1)
+	{
+		int r;
+	cout<<"Enter the radius of Circle : "<<endl; cin>>r;
+	cout<<circle(r);
+		
+	}
+	else if(choice == 2)
+	{float l;
+		cout<<"Enter the length of side of Square : "<<endl; cin>> l;
+		cout<<square(l);
+	}
+	
+	else if(choice == 3)
+	{int r;
+		cout<<"Enter the radius of Sphere : "<<endl; cin>>r;
+		cout<<sphere(r);
+	}
+	
+	else if(choice == 4)
+	{double l;
+		cout<<"Enter the side length of Cube : "<<endl; cin>>l;
+		cout<<cube(l);
+	}
+	
+	else if(choice == 5)
+	{double l,b;
+		cout<<"Enter the length of Rectangle : "<<endl; cin>>l;
+		cout<<"Enter the breath of Rectangle : "<<endl; cin>>b;
+		cout<<rectangle(l,b);
+	}
+	
+	else
+	cout<<"Invalid Input...!";
+	return 0;
+}
