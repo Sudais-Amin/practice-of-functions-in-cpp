@@ -1,0 +1,28 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+void ones(string s){
+	int O=0,Z=0;
+	for(int i=0 ; i<s.length() ; i++)
+	{
+		if(s.at(i) == '1')
+		O++;
+		else if(s.at(i) == '0')
+		Z++;
+
+	}
+	cout<<"-----------------------------------------"<<endl;
+	cout<<"Number of 1s is : "<<O<<endl<<endl;
+	cout<<"Number of 0s is : "<<Z;
+	
+	
+
+}
+
+int main(){
+	string s;
+	cout<<"Enter the (VALID) Binary Number : ";
+	cin>>s;
+	ones(s);
+}
